@@ -1,0 +1,124 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #52441d;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+h1 {
+  text-align: center;
+  margin: 0.1em;
+  color: #f0b410;
+  font-size: 80px;
+}
+.container {
+  height: 650px;
+  width: 650px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.card {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  transform: rotateY(180deg);
+  animation: 2s hideCard linear;
+  transition: transform 0.5s;
+}
+@keyframes hideCard {
+  0%,
+  70% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
+.card img {
+  max-width: 70%;
+  max-height: 65%;
+  transition: transform 0.5s;
+  transform: scale(0);
+  animation: 2s hideImage linear;
+}
+@keyframes hideImage {
+  0%,
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.card.active {
+  transform: rotateY(0);
+}
+.card.correct {
+  background-color: #65e469;
+}
+.card.wrong {
+  background-color: #fd245a;
+}
+.card.active img {
+  transform: scale(1);
+}
+
+.time {
+  font-size: 70px;
+  font-weight: bold;
+  color: #ccb986;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.button-wrap {
+  border: none;
+  padding: 20px 40px;
+  color: #fff;
+}
+.btn-start {
+  background-color: rgb(0, 255, 0);
+  height: 30px;
+  width: 60px;
+  border-radius: 50px;
+}
+
+.btn-start:hover {
+  background-color: rgb(0, 255, 130);
+}
+
+.btn-stop {
+  margin-left: 20px;
+  background-color: rgb(255, 45, 10);
+  height: 30px;
+  width: 60px;
+  border-radius: 50px;
+}
+
+.btn-stop:hover {
+  background-color: rgb(255, 45, 100);
+}
+
+.disable {
+  background-color: #444444;
+  pointer-events: none;
+}
