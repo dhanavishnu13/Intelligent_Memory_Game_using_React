@@ -21,5 +21,6 @@ What did you learn while building this project? What challenges did you face and
 
 ## Demo
 
-Insert gif or link to demo
+![demo](https://user-images.githubusercontent.com/83368841/219966417-7d7794b0-8640-4b41-af8c-aa650d2b643f.gif)
+
 
